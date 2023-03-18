@@ -18,7 +18,7 @@ const movies = [ { title: 'The Shawshank Redemption', genre: 'Drama', year: 1994
   { title: 'Jurassic Park', genre: 'Science Fiction', year: 1993 },
   { title: 'Terminator 2: Judgment Day', genre: 'Science Fiction', year: 1991 },
   { title: 'The Lion King', genre: 'Animation', year: 1994 } ];
-  
+
   const genres = [ "Drama", "Crime", "Action", "Fantasy", "Western", "Science Fiction", "Thriller", "War", "Animation", ];
 
 function App() {

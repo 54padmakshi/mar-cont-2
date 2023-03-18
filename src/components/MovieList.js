@@ -16,11 +16,11 @@ function MovieList({ movies }) {
          </thead> 
          <tbody>
             <tr>
-            {movies.map((movie, index) => (
+            {movies.map((movies, index) => (
                   <tr key={index}>
-                        <td>{movie.title}</td>
-                        <td>{movie.genre}</td>
-                        <td>{movie.year}</td>
+                        <td>{movies.title}</td>
+                        <td >{movies.genre}</td>
+                        <td>{movies.year}</td>
                    </tr>
                  ))}
             </tr>
