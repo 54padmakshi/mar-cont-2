@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+h2{
+  font-size: 25pt;
+}
+h3{
+  font-size: 20pt;
+  
+  margin-left: 100pt;
+}
+.gendiv{
+text-align: left;
+margin-left: 80pt;
+height: 80px;
+width: 80%;
+}
+.filter {
+  background-color: #d2d2d2;
+  text-align: left;
+  margin-left: 100pt;
+  margin-right: 100pt;
+  
+}
+button{  
+  margin-top: 10pt;
+  margin-left: 20pt;
+  
+  }
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}   */
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
