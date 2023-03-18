@@ -1,7 +1,6 @@
 import React from 'react'
 
-function GenreFilter() {
-  
+function GenreFilter({genres, onGenreSelect}) {
    
    
    
@@ -9,15 +8,12 @@ function GenreFilter() {
     <div className='filter'> 
     <h3> Filter By Genre </h3>
     <div  className = "gendiv">
-    <button > Drama </button> &nbsp;
-    <button > Crime </button>&nbsp;
-    <button > Action </button>&nbsp;
-    <button > Fantasy </button>&nbsp;
-    <button > Western </button>&nbsp;
-    <button > Science Fiction</button>&nbsp;
-    <button > Thriller </button>&nbsp;
-    <button > War </button>&nbsp;
-    <button > Animation </button></div>
+      {genres.map((genre) => (
+        <button key={genre} onClick={() => onGenreSelect(genre)}>
+            {genre}
+          </button>
+        ))}
+    </div>
     
     </div>
 
