@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import {React,useState}  from 'react';
 import './App.css';
 import MovieList from './components/MovieList';
 import GenreFilter from './components/GenreFilter';
@@ -19,20 +19,25 @@ const movies = [ { title: 'The Shawshank Redemption', genre: 'Drama', year: 1994
   { title: 'Terminator 2: Judgment Day', genre: 'Science Fiction', year: 1991 },
   { title: 'The Lion King', genre: 'Animation', year: 1994 } ];
 
-  const genres = [ "Drama", "Crime", "Action", "Fantasy", "Western", "Science Fiction", "Thriller", "War", "Animation", ];
+ // const genres = [ "Drama", "Crime", "Action", "Fantasy", "Western", "Science Fiction", "Thriller", "War", "Animation", ];
 
 function App() {
-  const [selectedGenre, setSelectedGenre] = useState(null);
+  
+   const [filterGenres, setFilterGenres] = useState ('all');
+   function filterByGenre (genre) {
+    setFilterGenres(genre)
+   }
 
-  function handleGenreSelect(genre) {
-    setSelectedGenre(genre);
-   
-  }
+   const filterMovies = filterGenres === "all" ? movies : movies.filter(movie => movie.genre === filterGenres)
+
+   function setall(){
+        setFilterGenres("all")
+   } 
   return (
     <div className="App">
       <div> <h2> Top 15 Movies of all time </h2></div>
-      <GenreFilter genres={genres} onGenreSelect={handleGenreSelect}/>
-      <MovieList movies={movies} selectedGenre={selectedGenre}/>
+      <GenreFilter movies= {movies} genreFilter = {filterByGenre} setall={setall} />
+      <MovieList movies={filterMovies} />
     </div>
   );
 }
